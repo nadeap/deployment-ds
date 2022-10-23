@@ -66,10 +66,11 @@ def apiDeteksi():
             gambar_prediksi = '/static/images/ipm_low.jpg'
 
         # Return hasil prediksi dengan format JSON
-        return jsonify({
-            "prediksi": hasil_prediksi,
-            "gambar_prediksi": "http://localhost:5000"+gambar_prediksi
-        })
+        # return jsonify({
+        #     "prediksi": hasil_prediksi,
+        #     "gambar_prediksi": "http://localhost:5000"+gambar_prediksi
+        # })
+        return render_template("index.html",gambar_prediksi=gambar_prediksi,prediksi=hasil_prediksi)
 
 # =[Main]========================================
 

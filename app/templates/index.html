@@ -116,7 +116,8 @@
 						onInput="$('#rangeVal_usia_harapan_hidup_width').html($(this).val())" name="usia_harapan_hidup">
 						</br>
 						<!-- Tombol Prediksi -->
-						<input class="btn btn-default btn-lg" type="submit" value="Prediksi" id="prediksi_submit">
+						<!-- <input class="btn btn-default btn-lg" type="submit" value="Prediksi" id="prediksi_submit"> -->
+						<input class="btn btn-default btn-lg" type="submit" value="Prediksi">
 					</div>
 				</form>
 			</div>
@@ -125,6 +126,12 @@
 				<!-- Bagian Halaman untuk Hasil Prediksi -->
 				<div id="hasil_prediksi" align="center">
 						<!-- Hasil Prediksi akan ditampilkan di sini-->
+						{% if prediksi %}
+						<h3>Hasil Prediksi</h3>
+						<br>
+						<img src="{{ gambar_prediksi }}" alt="" width="200" height="150">
+						<p>{{ prediksi }}</p>
+						{% endif %}
 				</div>
 			</div>
 		</div>
